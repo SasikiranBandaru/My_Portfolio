@@ -94,9 +94,11 @@ jobs:
       url: ${{ steps.deploy.outputs.page_url }}
 
     steps:
-      # Step 1: Configure GitHub Pages
+      # Step 1: Configure GitHub Pages (enablement auto-turns Pages on)
       - name: ⚙️ Setup Pages
         uses: actions/configure-pages@v4
+        with:
+          enablement: true
 
       # Step 2: Deploy the uploaded artifact
       - name: 🚀 Deploy
